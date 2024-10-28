@@ -14,21 +14,24 @@ interface FourthSectionProps {
   }[];
 }
 
-// Import statements remain unchanged
-
 const FourthSection: React.FC<FourthSectionProps> = ({ workItems }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [scrollDistance, setScrollDistance] = useState(0);
+  const [viewportWidth, setViewportWidth] = useState<number | null>(null);
 
   // Adjust scroll distance based on viewport width
   useEffect(() => {
     const updateScrollDistance = () => {
       const width = window.innerWidth;
+      setViewportWidth(width);
       if (width >= 1024) setScrollDistance(width * 0.8); // Desktop
       else if (width >= 768) setScrollDistance(width * 0.6); // Tablet
       else setScrollDistance(width); // Mobile
     };
+
+    // Run on mount
     updateScrollDistance();
+    // Update on resize
     window.addEventListener("resize", updateScrollDistance);
     return () => window.removeEventListener("resize", updateScrollDistance);
   }, []);
@@ -82,9 +85,9 @@ const FourthSection: React.FC<FourthSectionProps> = ({ workItems }) => {
               className="snap-center flex-shrink-0 mx-2"
               style={{
                 width:
-                  window.innerWidth >= 1024
+                  viewportWidth && viewportWidth >= 1024
                     ? "calc(33.33% - 8px)"
-                    : window.innerWidth >= 768
+                    : viewportWidth && viewportWidth >= 768
                     ? "calc(50% - 8px)"
                     : "100%",
               }}
