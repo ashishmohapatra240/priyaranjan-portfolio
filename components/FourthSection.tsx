@@ -104,14 +104,14 @@ const FourthSection: React.FC<FourthSectionProps> = ({ workItems }) => {
         <div className="flex items-center justify-end mt-4 space-x-4">
           <button
             onClick={scrollLeft}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+            className="p-2 bg-gray-200 hover:bg-gray-300 transition-colors"
             aria-label="Scroll Left"
           >
             <FaArrowLeft className="text-gray-800" />
           </button>
           <button
             onClick={scrollRight}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors"
+            className="p-2 bg-gray-200 hover:bg-gray-300 transition-colors"
             aria-label="Scroll Right"
           >
             <FaArrowRight className="text-gray-800" />

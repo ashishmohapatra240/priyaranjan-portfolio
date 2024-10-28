@@ -38,7 +38,7 @@ const ThirdSection: React.FC = () => {
       </div>
 
       <div className="relative w-36 h-36 md:w-48 md:h-48 mb-8 md:mb-0 order-1 md:order-2">
-        <div className="w-full h-full bg-black rounded-full border border-gray-300"></div>
+        <div className="w-full h-full bg-black border border-gray-300"></div>
       </div>
     </section>
   );
