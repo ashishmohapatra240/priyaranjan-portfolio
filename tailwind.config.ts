@@ -8,6 +8,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      darkMode: false,
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
