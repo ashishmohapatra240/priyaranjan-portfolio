@@ -4,8 +4,8 @@ import { FaInstagram, FaBehance } from "react-icons/fa";
 
 const ThirdSection: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center h-screen px-8 gap-8 md:gap-16">
-      <div className="flex flex-col max-w-lg text-center md:text-left order-2 md:order-1">
+    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen px-4 sm:px-6 md:px-8 py-16 gap-8 md:gap-16 max-w-7xl mx-auto">
+      <div className="flex flex-col max-w-lg w-full text-center md:text-left order-2 md:order-1 space-y-6">
         <h1 className="text-4xl md:text-6xl font-inter text-black mb-6">
           I am <span className="font-bold">priyaranjan</span>
         </h1>
@@ -37,7 +37,7 @@ const ThirdSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="relative w-36 h-36 md:w-48 md:h-48 mb-8 md:mb-0 order-1 md:order-2">
+      <div className="relative w-32 h-32 sm:w-36 sm:h-36 md:w-48 md:h-48 order-1 md:order-2 flex-shrink-0">
         <div className="w-full h-full bg-black border border-gray-300"></div>
       </div>
     </section>

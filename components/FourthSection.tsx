@@ -49,9 +49,9 @@ const FourthSection: React.FC<FourthSectionProps> = ({ workItems }) => {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-start justify-between px-4 lg:px-8 py-16 max-w-full mx-auto overflow-hidden">
+    <section className="flex flex-col lg:flex-row items-start justify-between px-4 sm:px-6 lg:px-8 py-12 md:py-16 max-w-7xl mx-auto overflow-hidden gap-8">
       {/* Left Side - Fixed Width on Large Screens */}
-      <div className="flex flex-col max-w-lg lg:max-w-sm flex-shrink-0 mb-8 lg:mb-0 mx-16">
+      <div className="flex flex-col w-full lg:max-w-sm flex-shrink-0 space-y-6 px-4 sm:px-6">
         <div>
           <h2 className="text-4xl lg:text-6xl font-inter text-black mb-2">
             my <span className="font-bold">work</span>
@@ -84,12 +84,11 @@ const FourthSection: React.FC<FourthSectionProps> = ({ workItems }) => {
               key={index}
               className="snap-center flex-shrink-0 mx-2"
               style={{
-                width:
-                  viewportWidth && viewportWidth >= 1024
-                    ? "calc(33.33% - 8px)"
-                    : viewportWidth && viewportWidth >= 768
-                    ? "calc(50% - 8px)"
-                    : "100%",
+                width: viewportWidth && viewportWidth >= 1024
+                  ? "calc(33.33% - 16px)"
+                  : viewportWidth && viewportWidth >= 640
+                  ? "calc(50% - 16px)"
+                  : "calc(100% - 16px)",
               }}
             >
               <WorkCard
